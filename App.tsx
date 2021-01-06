@@ -14,13 +14,12 @@ import {
   StyleSheet,
   ScrollView,
   View,
-  Text,
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
 
-// import Button from './src/components/Button';
-import {Button} from '@components';
+import {Button} from './src/components/Button';
+// import {Button, Text} from '@componeDnts';
 
 declare const global: {HermesInternal: null | {}};
 
