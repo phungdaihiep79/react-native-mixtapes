@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Testing workflow
 
 # Controls when the action will run. 
 on:
@@ -32,4 +32,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run test
         run: |
-          yarn test
+          yarn jest
+          
+      # Runs a set of commands using the runners shell
+      - name: Run test
+        run: |
+          yarn eslint . --ext .js,.jsx,.ts,.tsx
+
