@@ -19,6 +19,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+// import Button from './src/components/Button';
+import {Button} from '@components';
+
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
@@ -26,11 +29,7 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{flex: 1}}>
-        <View style={styles.root}>
-          <TouchableOpacity>
-            <Text>Nhấp em đi</Text>
-          </TouchableOpacity>
-        </View>
+        <Button />
       </SafeAreaView>
     </>
   );
