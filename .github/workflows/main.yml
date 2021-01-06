@@ -3,20 +3,12 @@
 name: Testing workflow
 
 # Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
+on: [push, pull_request, workflow_dispatch]
+ 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  testandlint:
+  test-and-lint:
     # The type of runner that the job will run on
     runs-on: macos-latest
 
@@ -25,9 +17,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      # Verify run id
+      - name: Verify run id
+        run: echo Run Id $GITHUB_RUN_ID
+        
+      # Output the branch name
+      - name: Output the branch name
+        run: echo $(echo $GITHUB_REF | cut -d'/' -f 3)
 
       # Installing dependencies
       - name: Installing dependencies
