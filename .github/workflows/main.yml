@@ -28,13 +28,17 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+
+      # Installing dependencies
+      - name: Installing dependencies
+        run: yarn
         
-      # Runs a set of commands using the runners shell
+      # Runs lint
       - name: Run lint
         run: |
           yarn lint
 
-      # Runs a set of commands using the runners shell
+      # Runs test
       - name: Run test
         run: |
           yarn test
