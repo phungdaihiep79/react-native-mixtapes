@@ -8,12 +8,12 @@
  * @format
  */
 
-import React from 'react';
-import {SafeAreaView, StyleSheet, StatusBar} from 'react-native';
+import React from 'react'
 
-import {Button} from '@components';
+import { Button } from '@components'
+import { StyleSheet, SafeAreaView, StatusBar } from 'react-native'
 
-declare const global: {HermesInternal: null | {}};
+// declare const global: { HermesInternal: null | {} }
 
 const App = () => {
   return (
@@ -23,8 +23,8 @@ const App = () => {
         <Button />
       </SafeAreaView>
     </>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   root: {
@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-});
+})
 
-export default App;
+export default App
