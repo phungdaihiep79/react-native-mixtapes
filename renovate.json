@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "baseBranches": ["master"],
+  "labels": ["renovate-bot"],
+  "packageRules": [
+    {
+      "updateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    }
+  ],
+  "timezone": "Asia/Ho_Chi_Minh",
+  "schedule": [
+    "every weekend"
+  ],
+  "ignorePaths": ["android", "ios"],
+  "gradle": true,
+  "ignoreDeps": [
+    "react",
+    "react-native",
+    "typescript",
+    "@babel/core",
+    "@types/react-native",
+    "@types/jest"
+  ]
+}
