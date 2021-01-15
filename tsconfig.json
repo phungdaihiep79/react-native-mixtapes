@@ -59,7 +59,8 @@
     "paths": {
       "@components": ["./components"],
       "@screens" : ["./screens"],
-      "@navigation" : ["./navigation"]
+      "@navigation" : ["./navigation"],
+      "@theme" : ["./theme"]
     }
   },
   "exclude": [

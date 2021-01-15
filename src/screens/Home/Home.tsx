@@ -1,12 +1,14 @@
 import React, { FC, useCallback } from 'react'
 
 import { HeavenParams, HellParams, useNavigation } from '@navigation'
-import { Text, TouchableOpacity, StyleSheet, View } from 'react-native'
-
+import { makeStyles } from '@theme'
+import { Text, TouchableOpacity, View } from 'react-native'
 type HomeProps = {}
 
-export const Home: FC<HomeProps> = () => {
+export const Home: FC<HomeProps> = (props: HomeProps) => {
   const navigation = useNavigation()
+
+  const style = useStyle(props)
 
   const onNavigateToHell = useCallback(
     (demons: HellParams) => navigation.navigate('Hell', { demons }),
@@ -19,11 +21,11 @@ export const Home: FC<HomeProps> = () => {
   )
 
   return (
-    <View style={style.root}>
+    <View style={style.verticalContainer}>
       <TouchableOpacity onPress={() => onNavigateToHeaven('cassiel')}>
         <Text>Heaven</Text>
       </TouchableOpacity>
-      <Text>Choose your way :))</Text>
+      <Text style={style.text}>Choose your way :))</Text>
       <TouchableOpacity onPress={() => onNavigateToHell('leviathan')}>
         <Text>Hell</Text>
       </TouchableOpacity>
@@ -31,11 +33,14 @@ export const Home: FC<HomeProps> = () => {
   )
 }
 
-const style = StyleSheet.create({
+const useStyle = makeStyles<HomeProps>()(({ font }) => ({
   root: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-})
+  text: {
+    fontSize: font.size.h3,
+  },
+}))
