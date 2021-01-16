@@ -44,7 +44,7 @@
     "jest": "25.5.4",
     "lint-staged": ">=10",
     "metro-react-native-babel-preset": "0.64.0",
-    "react-test-renderer": "16.13.1",
+    "react-test-renderer": "16.14.0",
     "standard-version": "9.1.0",
     "typescript": "3.8.3"
   },
