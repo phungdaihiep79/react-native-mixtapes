@@ -1,6 +1,6 @@
 import React, { FC, useCallback } from 'react'
 
-import { HeavenParams, HellParams, useNavigation } from '@navigation'
+import { HellParams, useNavigation } from '@navigation'
 import { makeStyles } from '@theme'
 import { Text, TouchableOpacity, View } from 'react-native'
 type HomeProps = {}
@@ -15,15 +15,14 @@ export const Home: FC<HomeProps> = (props: HomeProps) => {
     [navigation],
   )
 
-  const onNavigateToHeaven = useCallback(
-    (angels: HeavenParams) => navigation.navigate('Heaven', { angels }),
-    [navigation],
-  )
+  const onNavigateToAppEbike = useCallback(() => {
+    navigation.navigate('AppEbikeFake')
+  }, [navigation])
 
   return (
     <View style={style.verticalContainer}>
-      <TouchableOpacity onPress={() => onNavigateToHeaven('cassiel')}>
-        <Text>Heaven</Text>
+      <TouchableOpacity onPress={onNavigateToAppEbike}>
+        <Text>Test RTK & Redux saga</Text>
       </TouchableOpacity>
       <Text style={style.text}>Choose your way :))</Text>
       <TouchableOpacity onPress={() => onNavigateToHell('leviathan')}>

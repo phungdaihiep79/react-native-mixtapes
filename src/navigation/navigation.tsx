@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { Hell, Home, Heaven } from '@screens'
+import { Hell, Home, Heaven, AppEbikeFake } from '@screens'
 
 const AppStack = createStackNavigator()
 
@@ -15,6 +15,7 @@ const AppNavigation: FC<AppNavigationProps> = () => {
         <AppStack.Screen name={'Home'} component={Home} />
         <AppStack.Screen name={'Hell'} component={Hell} />
         <AppStack.Screen name={'Heaven'} component={Heaven} />
+        <AppStack.Screen name={'AppEbikeFake'} component={AppEbikeFake} />
       </AppStack.Navigator>
     </NavigationContainer>
   )
