@@ -16,4 +16,5 @@ export type AppStackParamsList = {
     angels: HeavenParams
   }
   AppEbikeFake?: {}
+  Hell2?: {}
 }
