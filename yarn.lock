@@ -1892,10 +1892,10 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/lodash.keys@4.2.7":
-  version "4.2.7"
-  resolved "https://registry.yarnpkg.com/@types/lodash.keys/-/lodash.keys-4.2.7.tgz#a5a891a181cf1030a21f302daa144b94be4792d1"
-  integrity sha512-4GyGpi/VL9EI5sTC6ra8BOVdLMAs03FpclANeP0SfVup0Nv6mcO+OtW5w71Mj9BsR6C7Rs5StmEH4RHtit0CKw==
+"@types/lodash.keys@4.2.9":
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/@types/lodash.keys/-/lodash.keys-4.2.9.tgz#fcb9eee60491cfceb3beb8cf2c6533722e92f2f5"
+  integrity sha512-xYfRf5I2/99g2HST1reW1MnS4aLkinWzgO+v/x+nPTgh8vsUuY1R6f4lZ32IZVszdOt3KVN4o9jk+QfTQGXr7A==
   dependencies:
     "@types/lodash" "*"
 
